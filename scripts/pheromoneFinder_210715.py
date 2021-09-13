@@ -224,7 +224,7 @@ def fimowrapper(candidate_fasta_file,
 #    'concatPutativePheromone': Concatenates results from the CAAX Locator per chromosome into a single FASTA file of putative pheromones.
 #    'AsnLocator': This is to confirm the putative pheromones have an Asn in the region upstream of the CAAX box. 
 #    'scorePheromone': This is to score the putative pheromone hits from CAAX Locator with BLASTX against Scerevisiae proteome & use a hydrophobicity scale for the 8 amino-acids upstream of Cys (mature region of pheromone).
-#    'promoterExtract': This is to extract the pheromone sequence of the candidates after the CAAX-AsnLocator.
+#    'promoterExtract': This is to extract the promoter sequence of the candidates after the CAAX-AsnLocator, defined as 1000bp upstream sequence if available.
 #    'candidateStats': This function analyzes the genomes, proteomes, CAAX-Stop candidates and Asn...CAAX-Stop candidates to output a csv of stats that I can use for plotting. Modified on 210715 to include protein model counts from the annotated proteome files.
 #    'candidateCopyNumber': This function analyzes the Asn...CAAX-Stop candidates from an input file to output a histogram of pairwiseIDs of candidates (not from the same locus) and a csv list of the candidates with a copy in the genome.
 #    'phyloGroupCandidates': This function takes as input lists of species that are expected to have conserved pheromone sequences and the folder with all the Asn...CAAX-Stop candidates. The output is a concatenated list of all candidates for the phylogenetic groups.
@@ -1756,7 +1756,7 @@ def formatExceptionInfo(maxTBlevel=5):
 #    'concatPutativePheromone': Concatenates results from the CAAX Locator per chromosome into a single FASTA file of putative pheromones.
 #    'AsnLocator': This is to confirm the putative pheromones have an Asn in the region upstream of the CAAX box. 
 #    'scorePheromone': This is to score the putative pheromone hits from CAAX Locator with BLASTX against Scerevisiae proteome & use a hydrophobicity scale for the 8 amino-acids upstream of Cys (mature region of pheromone).
-#    'promoterExtract': This is to extract the pheromone sequence of the candidates after the CAAX-AsnLocator.
+#    'promoterExtract': This is to extract the promoter sequence of the candidates after the CAAX-AsnLocator, defined as 1000bp upstream sequence if available.
 #    'candidateStats': This function analyzes the genomes, CAAX-Stop candidates and Asn...CAAX-Stop candidates to output a csv of stats that I can use for plotting.
 #    'candidateCopyNumber': This function analyzes the Asn...CAAX-Stop candidates from an input file to output a histogram of pairwiseIDs of candidates (not from the same locus) and a csv list of the candidates with a copy in the genome.
 #    'phyloGroupCandidates': This function takes as input lists of species that are expected to have conserved pheromone sequences and the folder with all the Asn...CAAX-Stop candidates. The output is a concatenated list of all candidates for the phylogenetic groups.
@@ -1782,7 +1782,7 @@ try:
         print "+\'scaffoldShortlist\'\tShortlist scaffolds that are larger than the provided cutoff (provided as an integer). This helps prioritize scaffolds based on the size for limited computational resources."
         print "+\'scaffoldRunCheck\'\tChecks if the output files have been generated for all the scaffolds that are present in the input scaffold list. Generates a list of missing outputs that can be used as an input for the CAAXLocator SLURM script."
         print "+\'scorePheromone\'\tUses the results of the CAAXLocator to score the putative pheromones using BLASTXagainst the Scerevisiae proteome & also a hydrophobicity scale for the 8 amino-acids upstream of Cys."
-        print "+\'promoterExtract\'\tUses the candidates from the CAAX-Asn-Locators to extract upstream 1000bp as a pheromone."  
+        print "+\'promoterExtract\'\tUses the candidates from the CAAX-Asn-Locators to extract upstream 1000bp as a promoter."  
         print "+\'candidateStats\'\tGenerates statistics of genomes and candidates of all genomes present in the input folder, given that output files .caax and .caax.asn are present in their corresponding folders." 
         print "+\'candidateCopyNumber\'\tIdentifies Asn...CAAX-Stop candidates (from input .caax.asn) file that have multiple copies in the genome as judged by pairwiseID of candidates (not counting candidates from the same CAAX-Stop)." 
         print "+\'phyloGroupCandidates\'\tIdentifies Asn...CAAX-Stop candidates from identified phylogenetic groups as identified by species within a divergence threshold from Shen 2018." 
