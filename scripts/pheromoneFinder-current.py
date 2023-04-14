@@ -222,7 +222,7 @@ def fimowrapper(candidate_fasta_file,
 #    'genomeIdProcess': Processes genomes by prefixing the genome file name to the chromosome IDs.
 #    'genomeSplitter': Splits genome into individual FASTA files for the chromosomes.
 #    'concatPutativePheromone': Concatenates results from the CAAX Locator per chromosome into a single FASTA file of putative pheromones.
-#    'AsnLocator': This is to confirm the putative pheromones have an Asn in the region upstream of the CAAX box. 
+#    'AsnLocator': Identifies Asn...CAAX-Stop ORFs that could be pheromones in yeast. 
 #    'scorePheromone': This is to score the putative pheromone hits from CAAX Locator with BLASTX against Scerevisiae proteome & use a hydrophobicity scale for the 8 amino-acids upstream of Cys (mature region of pheromone).
 #    'promoterExtract': This is to extract the pheromone sequence of the candidates after the CAAX-AsnLocator.
 #    'candidateStats': This function analyzes the genomes, proteomes, CAAX-Stop candidates and Asn...CAAX-Stop candidates to output a csv of stats that I can use for plotting. Modified on 210715 to include protein model counts from the annotated proteome files.
@@ -1782,6 +1782,7 @@ try:
         print "+\'seqIdProcess\'\tProcesses genomes by prefixing the sequence file name, i.e. species name to the sequence record IDs."
         print "+\'genomeSplit\'\tSplits a genome into individual FASTA files for each chromosome, written into the Temp folder."
         print "+\'conCat\'\tConcatenates the individual FASTA files generated from the pheromone search run for  each chromosome/contig, written into the Temp folder. Be sure to preserve the same output name to prevent errors."
+        print "+\'Asn\'\tIdentifies all Asn...CAAX-Stop ORFs in yeast genomes that could be pheromone genes."
         print "+\'scaffoldShortlist\'\tShortlist scaffolds that are larger than the provided cutoff (provided as an integer). This helps prioritize scaffolds based on the size for limited computational resources."
         print "+\'scaffoldRunCheck\'\tChecks if the output files have been generated for all the scaffolds that are present in the input scaffold list. Generates a list of missing outputs that can be used as an input for the CAAXLocator SLURM script."
         print "+\'scorePheromone\'\tUses the results of the CAAXLocator to score the putative pheromones using BLASTXagainst the Scerevisiae proteome & also a hydrophobicity scale for the 8 amino-acids upstream of Cys."
