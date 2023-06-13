@@ -10,3 +10,6 @@ Code:
 Data:
 1. data/Tables_*yymmdd*.xlxs: Excel file including Tables from publication to make it easy for analysis by readers.
 2. data/analysis-tree.png: Illustration of order of analysis using codebase starting from genome file to obtain pheromone candidate genes, including scoring of candidates within genomes and in phylogenetic context.
+
+Analysis pipeline
+![My Image](data/analysis-tree.png)
