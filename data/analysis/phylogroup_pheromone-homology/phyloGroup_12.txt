@@ -1,0 +1,2 @@
+ascoidea_rubescens.fas.caax.asn
+ascoidea_asiatica.fas.caax.asn

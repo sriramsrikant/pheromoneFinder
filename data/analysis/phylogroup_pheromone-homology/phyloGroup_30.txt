@@ -1,0 +1,2 @@
+starmerella_bombicola_JCM9596.fas.caax.asn
+candida_apicola.fas.caax.asn

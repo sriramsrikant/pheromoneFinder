@@ -1,0 +1,5 @@
+yHMPu5000035643_yarrowia_bubula_160519.fas.caax.asn
+yarrowia_keelungensis.fas.caax.asn
+yarrowia_lipolytica.fas.caax.asn
+yarrowia_deformans.fas.caax.asn
+yHMPu5000035645_yarrowia_divulgata_160519.fas.caax.asn

@@ -1,0 +1,8 @@
+hanseniaspora_vinae.fas.caax.asn
+yHMPu5000034957_hanseniaspora_osmophila_160519.fas.caax.asn
+yHMPu5000035695_hanseniaspora_pseudoguilliermondii_160519.fas.caax.asn
+yHMPu5000034963_hanseniaspora_clermontiae_160519.fas.caax.asn
+hanseniaspora_uvarum.fas.caax.asn
+yHMPu5000035684_kloeckera_hatyaiensis_160519.fas.caax.asn
+hanseniaspora_valbyensis.fas.caax.asn
+yHMPu5000035696_hanseniaspora_singularis_160519.fas.caax.asn

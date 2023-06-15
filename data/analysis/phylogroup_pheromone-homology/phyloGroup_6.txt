@@ -1,0 +1,3 @@
+komagataella_pastoris.fas.caax.asn
+yHMPu5000034939_komagataella_pseudopastoris_160519.fas.caax.asn
+yHMPu5000026274_komagataella_populi_160519.fas.caax.asn
